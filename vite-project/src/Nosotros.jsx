@@ -4,7 +4,7 @@ function Nosotros() {
     return(
         <>
             <div>
-                
+                <p>Hola adios</p>
             </div>
         </>
     )

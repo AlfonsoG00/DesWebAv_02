@@ -1,0 +1,60 @@
+header {
+    display: flex;
+    min-height: 100px;
+    justify-content: space-between;
+    background-color: lightgreen;
+    margin: 0;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.logojuego{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    padding-left: 25px;
+}
+
+h2{
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 40px;
+}
+.logoDG{
+    height: 70px;
+    margin-right: 10px;
+}
+
+nav a{
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: 500;
+    padding-right: 40px;
+}
+
+nav a:hover{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    .navbarra{
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+    h2{
+        padding-left: 5px;
+        padding-right: 15px;
+    }
+    .logojuego{
+        padding-left: 0px;
+    }
+}

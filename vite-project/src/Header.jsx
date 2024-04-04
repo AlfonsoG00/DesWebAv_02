@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import LogoByN from './assets/Logo_Sin_fondo.png'
 import './CCS/headercss.css'
+import Nosotros from './Nosotros.jsx'
 
 function Header() {
 
@@ -14,7 +15,7 @@ function Header() {
             <nav className='navbarra'>
                 <a href='' className='Link'>Inicio</a>
                 <a href='' className='Link'>Proceso</a>
-                <a href='/Nosotros' className='Link'>Nosotros</a>
+                <a href='/Nosotros.jsx' className='Link'>Nosotros</a>
             </nav>
         </header>
         </>

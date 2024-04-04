@@ -1,0 +1,51 @@
+.sobremi{
+    margin-bottom: 10px;
+}
+.logoautor{
+    display: flex;
+    height: 300px;
+    align-items: center;
+    padding-left: 300px;
+    padding-top: 300px;
+    margin-bottom: 0px;
+}
+.personajeyo{
+    height: 600px;
+}
+.biografia{
+    margin-top: 0px;
+    padding-left: 500px;
+    font-size: 35px;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
+
+.textobio{
+    margin-top: -80px;
+    padding-left: 1100px;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+.sobremi2{
+    margin-top: 250px;
+    font-family: sans-serif;
+}
+
+.tituloexp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgproyecto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgRem{
+    height: 400px;
+}
+
+

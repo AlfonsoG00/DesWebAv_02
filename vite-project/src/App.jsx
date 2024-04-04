@@ -12,7 +12,7 @@ function App() {
     <>
       <body>
         <div className='headerapp'>
-          <Headernav/>
+          <Nosotros/>
         </div>
         <div className='fondocomp'>
           <p>Hola</p>

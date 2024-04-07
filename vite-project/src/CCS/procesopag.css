@@ -1,0 +1,21 @@
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+    font-style: normal;
+    color: white;
+}
+.imgnoticia1{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.imagendg{
+    min-height: 300px;
+    max-height: 500px;
+}

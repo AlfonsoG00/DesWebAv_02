@@ -1,25 +1,27 @@
 header {
     display: flex;
-    min-height: 100px;
+    min-height: 20%;
     justify-content: space-between;
-    background-color: lightgreen;
+    background-color: #9FD966;
     margin: 0;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
 }
 
 .logojuego{
     display: flex;
-    height: 70px;
+    min-height: 70px;
+    max-height: 75px;
     align-items: center;
     padding-left: 25px;
 }
 
-h2{
-    font-size: 30px;
-    font-weight: 500;
-    padding-left: 40px;
+.nombre{
+    padding-left: 20px;
+    font-family: "Arya", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
 }
 .logoDG{
     height: 70px;
@@ -29,8 +31,6 @@ h2{
 nav a{
     align-items: center;
     justify-content: space-between;
-    font-size: 25px;
-    font-weight: 500;
     padding-right: 40px;
 }
 
@@ -40,6 +40,10 @@ nav a:hover{
 a{
     text-decoration: none;
     color: black;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
 }
 
 @media (max-width:700px){

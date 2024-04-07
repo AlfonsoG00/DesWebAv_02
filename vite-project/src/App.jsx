@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import Headernav from './Header.jsx'
 import './CCS/backgroundcss.css'
 import Nosotros from './Nosotros.jsx'
+import Proceso from './Proceso.jsx'
+import Home from './Home.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +14,8 @@ function App() {
     <>
       <body>
         <div className='headerapp'>
-          <Nosotros/>
+          <Headernav/>
+          <Home/>
         </div>
         <div className='fondocomp'>
           <p>Hola</p>

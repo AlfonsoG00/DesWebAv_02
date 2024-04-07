@@ -1,7 +1,7 @@
-.img1{
-    min-height: 90px;
-    margin-bottom: 50px;
-    
+.noticaorden{
+    display: inline-block;
+    justify-content: space-evenly;
+    margin-right: 5%;
 }
 .Portada{
     min-width: 10%;

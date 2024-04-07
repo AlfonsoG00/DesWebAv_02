@@ -6,6 +6,7 @@ import './CCS/backgroundcss.css'
 import Nosotros from './Nosotros.jsx'
 import Proceso from './Proceso.jsx'
 import Home from './Home.jsx'
+import Pie from './Footer.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,10 +19,10 @@ function App() {
           <Home/>
         </div>
         <div className='fondocomp'>
-          <p>Hola</p>
         </div>
         </body>
-    </>
+        <Pie/>
+      </>
   )
 }
 

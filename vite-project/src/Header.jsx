@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import LogoByN from './assets/Logo_Sin_fondo.png'
 import './CCS/headercss.css'
+import { Link } from 'react-router-dom'
 
 function Header() {
 
@@ -19,9 +20,9 @@ function Header() {
                 <h2 className='nombre'>Disaster Garden</h2>
             </div>
             <nav className='navbarra'>
-                <a href='' className='Link'>HOME</a>
-                <a href='' className='Link'>PROCESS</a>
-                <a href='/Nosotros.jsx' className='Link'>ABOUT US</a>
+                <Link className='Link' to = "/Home">NOTICIAS</Link>
+                <Link className ='Link' to = "/Proceso">PROCESS</Link>
+                <Link className ='Link' to ="/Nosotros">ABOUT US</Link>
             </nav>
         </header>
         </>

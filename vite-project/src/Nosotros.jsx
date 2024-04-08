@@ -1,30 +1,77 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import YoUno from './assets/Yo_Uno.png'
 import './CCS/nosotroscss.css'
 import Header from './Header.jsx'
 import Rem from './assets/Rem.jpg'
+import { data } from './imagenes.jsx'
 
 function Nosotros() {
+
+    const listRef = useRef();
+    const [currentIndex, setCurrentIndex] = useState(0)
+    useEffect(() => {
+        const listNode = listRef.current;
+        const imgNode = listNode.querySelectorAll("li > img") [currentIndex];
+
+        if (imgNode){ 
+            imgNode.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    }, [currentIndex])
+
+    const scrolltoImage = (direccion) => {
+        if (direccion == 'prev') {
+            setCurrentIndex(curr =>{
+                const isFirstSlide = currentIndex === 0;
+                return isFirstSlide ? 0 : curr - 1; 
+            })
+        } else {
+            const isLastSlide = currentIndex === data.length - 1;
+            if(!isLastSlide){
+                setCurrentIndex(curr => curr     + 1);
+            }
+        }
+    }
+
     return(
         <>
-            <div>
-                <Header/>
-            </div>
             <div className='sobremi'>
                 <div className='logoautor'> 
                     <img src={YoUno} className="personajeyo"alt="LogoAutorYO"/>
-                    <h1 className='biografia'>Alfonso Ramriez</h1>
+                    <h1 className='biografia'>Alfonso Ramirez Gamboa</h1>
                 </div>
                 <div>
                     <p className='textobio'>
-                        Soy un estuidante de de Universidad bla bla bla
+                        Estudiante de la Universidad Autonoma del Carmen, casi egresado de la carrera
+                        de Ing. en Diseño Multimedia. Tengo casi (no sé cuantos años llevas ) en el mundo de ilustración.
+                        No sé que cosas ponerte aquí asi que asi lo deje, ni moderrimo, pero intenta llenar este mismo 
+                        espacio de palabras, para que no se vea tan vacia la pagina jeje.
+                        <p classname= 'textochico'>
+                        NO SE aqui escribe un poquito de lo que te gusta hacer idk amistad, es que no sepo, y ya, 
+                        solo es para dar info. 
+                        </p>
                     </p>
                 </div>
+                <div className='sobremi2'>
+                    <h1 className='EXPERIENCIA' > TRABAJOS REALIZADOS</h1>
+                </div>
             </div>
-            <div className='sobremi2'>
-                <h1 className='tituloexp'>Experiencia</h1>
-                <div className='imgproyecto'>
-                    <img src={Rem} className="imgRem" alt="ImagenDeRem"/>
+            <div className='main-container'>
+                <div className='slider-container'>
+                    <div className='leftArrow' onClick = {() => scrolltoImage('prev')}> &#10094;</div>
+                    <div className = 'rightArrow' onClick = {() => scrolltoImage('next')}> &#10095; </div>
+                     <div className='container-images'> 
+                        <ul ref={listRef}>
+                            {
+                                data.map((item) => {
+                                    return <li key={item.id}>
+                                        <img src= {item.imgUrl} width={600} height={300}/>
+                                    </li>
+                                })
+                            }
+                        </ul>
+                     </div> 
                 </div>
             </div>
         </>

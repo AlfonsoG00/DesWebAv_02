@@ -7,6 +7,7 @@ import Nosotros from './Nosotros.jsx'
 import Proceso from './Proceso.jsx'
 import Home from './Home.jsx'
 import Pie from './Footer.jsx'
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,12 +15,19 @@ function App() {
   return (
     <>
       <body>
+        <BrowserRouter>
+
+        <Headernav/>
         <div className='headerapp'>
-          <Headernav/>
-          <Home/>
+          <Routes>
+            <Route path = "/home" element = {<Home/>} />
+            <Route path = "/proceso" element = {<Proceso/>} />
+            <Route path = "/nosotros" element = {<Nosotros/>} />
+          </Routes>
         </div>
         <div className='fondocomp'>
         </div>
+        </BrowserRouter>
         </body>
         <Pie/>
       </>
